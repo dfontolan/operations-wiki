@@ -6,12 +6,13 @@
     <meta name="description" content="{{ site.description }}">
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <script>try { document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (error) {}</script>
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/wiki-mark.svg' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
     <div class="site-shell">
       <aside class="sidebar" aria-label="Documentation navigation">
-        <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">✦</span><span>{{ site.title }}</span></a>
+        <a class="brand" href="{{ '/' | relative_url }}"><img class="brand-mark" src="{{ '/assets/images/wiki-mark.svg' | relative_url }}" alt=""><span>{{ site.title }}</span></a>
         <p class="tagline">{{ site.description }}</p>
 
         <nav>

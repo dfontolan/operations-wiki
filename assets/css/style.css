@@ -16,7 +16,7 @@ body { margin: 0; color: var(--ink); background: var(--page); font: 16px/1.7 Int
 .site-shell { min-height: 100vh; }
 .sidebar { position: fixed; inset: 0 auto 0 0; display: flex; flex-direction: column; width: var(--sidebar-width); overflow-y: auto; padding: 1.8rem 1.1rem 1.25rem; background: var(--sidebar); border-right: 1px solid var(--line); }
 .brand { display: flex; align-items: center; gap: .7rem; padding: 0 .55rem; color: var(--ink); font-size: 1.1rem; font-weight: 750; letter-spacing: -.02em; text-decoration: none; }
-.brand-mark { display: grid; width: 2rem; height: 2rem; place-items: center; color: #fff; border-radius: .65rem; background: linear-gradient(135deg, #3b82f6, #6d4aff); box-shadow: 0 5px 12px rgb(59 130 246 / 27%); }
+.brand-mark { width: 2rem; height: 2rem; border-radius: .65rem; box-shadow: 0 5px 12px rgb(59 130 246 / 27%); }
 .tagline { margin: .65rem .55rem 2.15rem; color: var(--muted); font-size: .8rem; line-height: 1.55; }
 .sidebar nav { flex: 1; }
 .navigation, .navigation ul { margin: 0; padding: 0; list-style: none; }
