@@ -27,6 +27,11 @@ Keep each page focused on one task or subject. For operational procedures, write
 
 -------------------------
 
+[!IMPORTANT]
+Key information users need to know to achieve their goal.
+
+-------------------------
+
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
 
