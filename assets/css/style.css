@@ -53,15 +53,15 @@ pre code { padding: 0; background: transparent; }
 blockquote { margin: 1.5rem 0; padding: .8rem 1rem; border-left: .25rem solid var(--link); border-radius: 0 .45rem .45rem 0; background: var(--hover); color: var(--muted); }
 .alert { margin: 1.5rem 0; padding: .9rem 1rem; border: 1px solid var(--alert-border); border-left: .28rem solid var(--alert-accent); border-radius: .55rem; background: var(--alert-background); color: var(--ink); }
 .alert--note { --alert-accent: #3b82f6; --alert-border: #b9d7ff; --alert-background: #eff6ff; }
-.alert--tip { --alert-accent: #16a34a; --alert-border: #b8e4c7; --alert-background: #effcf3; }
-.alert--important { --alert-accent: #7c3aed; --alert-border: #d8c5ff; --alert-background: #f6f0ff; }
-.alert--warning { --alert-accent: #d97706; --alert-border: #f6d28e; --alert-background: #fff8e8; }
-.alert--caution { --alert-accent: #dc2626; --alert-border: #f7bbbb; --alert-background: #fff1f1; }
+.alert--tip { --alert-accent: #15803d; --alert-border: #a7dcb9; --alert-background: #edf9f0; }
+.alert--important { --alert-accent: #7e22ce; --alert-border: #d9bdf7; --alert-background: #f8f1ff; }
+.alert--warning { --alert-accent: #a16207; --alert-border: #e4c26a; --alert-background: #fff8dc; }
+.alert--caution { --alert-accent: #be3f3f; --alert-border: #efc9c9; --alert-background: #fdf3f3; }
 :root[data-theme="dark"] .alert--note { --alert-border: #285a94; --alert-background: #152b46; }
-:root[data-theme="dark"] .alert--tip { --alert-border: #286343; --alert-background: #152f22; }
-:root[data-theme="dark"] .alert--important { --alert-border: #6543a3; --alert-background: #2b2041; }
-:root[data-theme="dark"] .alert--warning { --alert-border: #845b20; --alert-background: #3a2b12; }
-:root[data-theme="dark"] .alert--caution { --alert-border: #8f3c42; --alert-background: #411d23; }
+:root[data-theme="dark"] .alert--tip { --alert-border: #2f7a50; --alert-background: #153523; }
+:root[data-theme="dark"] .alert--important { --alert-border: #7041a5; --alert-background: #301d48; }
+:root[data-theme="dark"] .alert--warning { --alert-border: #8f6a24; --alert-background: #3b2d10; }
+:root[data-theme="dark"] .alert--caution { --alert-border: #914b50; --alert-background: #381e22; }
 .alert-title { display: block; margin-bottom: .25rem; font-size: .84rem; font-weight: 750; }
 .alert p { margin: .25rem 0 0; }
 table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; font-size: .92rem; }
