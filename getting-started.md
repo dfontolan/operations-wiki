@@ -22,3 +22,12 @@ title: Your page title
 Use folders for related content, such as `operations/`, `reference/`, and `templates/`. A page at `operations/example.md` is available at `/operations/example/`.
 
 Keep navigation labels short. Nest a page under a heading by placing it in that heading's `children` list in `_data/navigation.yml`.
+
+## Add an alert
+
+Use GitHub-style alerts to make important guidance easy to spot. The wiki supports `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, and `CAUTION`.
+
+```markdown
+> [!WARNING]
+> Do not share credentials in this wiki.
+```
