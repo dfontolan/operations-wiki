@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (error) {}</script>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
@@ -16,16 +17,18 @@
         <nav>
           <ul class="navigation">
             {% for item in site.data.navigation %}
-              <li>
+              <li class="nav-item{% if item.children %} has-children{% endif %}">
                 {% if item.url %}
-                  <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+                  <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}><span class="emoji" aria-hidden="true">{{ item.emoji }}</span>{{ item.title }}</a>
                 {% else %}
-                  <span class="nav-heading">{{ item.title }}</span>
+                  {% assign section_is_open = false %}
+                  {% for child in item.children %}{% if page.url == child.url %}{% assign section_is_open = true %}{% endif %}{% endfor %}
+                  <button class="nav-heading" type="button" aria-expanded="{{ section_is_open }}" aria-controls="section-{{ forloop.index }}"><span><span class="emoji" aria-hidden="true">{{ item.emoji }}</span>{{ item.title }}</span><span class="chevron" aria-hidden="true">⌄</span></button>
                 {% endif %}
                 {% if item.children %}
-                  <ul>
+                  <ul id="section-{{ forloop.index }}"{% unless section_is_open %} hidden{% endunless %}>
                     {% for child in item.children %}
-                      <li><a href="{{ child.url | relative_url }}" {% if page.url == child.url %}aria-current="page"{% endif %}>{{ child.title }}</a></li>
+                      <li><a href="{{ child.url | relative_url }}" {% if page.url == child.url %}aria-current="page"{% endif %}><span class="emoji" aria-hidden="true">{{ child.emoji }}</span>{{ child.title }}</a></li>
                     {% endfor %}
                   </ul>
                 {% endif %}
@@ -33,6 +36,10 @@
             {% endfor %}
           </ul>
         </nav>
+        <button class="theme-toggle" type="button" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Dark theme</span>
+        </button>
       </aside>
 
       <main class="content">
@@ -43,5 +50,6 @@
         <footer>Last updated: {{ page.last_modified_at | default: site.time | date: "%d %B %Y" }}</footer>
       </main>
     </div>
+    <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
   </body>
 </html>

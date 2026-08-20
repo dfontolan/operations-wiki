@@ -1,21 +1,30 @@
 - title: Home
+  emoji: 🏠
   url: /
 
 - title: Getting started
+  emoji: 🚀
   children:
     - title: How to use this wiki
+      emoji: 📖
       url: /getting-started/
     - title: Document template
+      emoji: 📝
       url: /templates/document-template/
 
 - title: Operations
+  emoji: ⚙️
   children:
     - title: Daily operations
+      emoji: 📅
       url: /operations/daily-operations/
     - title: Incident response
+      emoji: 🚨
       url: /operations/incident-response/
 
 - title: Reference
+  emoji: 📚
   children:
     - title: Contacts and escalation
+      emoji: 📞
       url: /reference/contacts/
