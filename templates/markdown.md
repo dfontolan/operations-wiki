@@ -47,3 +47,11 @@ This site was built using [GitHub Pages](https://pages.github.com/)
 -------------------------
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
 In a .md file on the same branch, relative link: /assets/images/electrocat.png
+-------------------------
+Table
+
+| Situation | First contact | Escalate to |
+| --- | --- | --- |
+| Service disruption | On-call responder | Incident lead |
+| Security concern | Security team | Security lead |
+| Vendor issue | Service owner | Vendor manager |
