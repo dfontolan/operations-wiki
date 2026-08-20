@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="sidebar" aria-label="Documentation navigation">
+        <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <p class="tagline">{{ site.description }}</p>
+
+        <nav>
+          <ul class="navigation">
+            {% for item in site.data.navigation %}
+              <li>
+                {% if item.url %}
+                  <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+                {% else %}
+                  <span class="nav-heading">{{ item.title }}</span>
+                {% endif %}
+                {% if item.children %}
+                  <ul>
+                    {% for child in item.children %}
+                      <li><a href="{{ child.url | relative_url }}" {% if page.url == child.url %}aria-current="page"{% endif %}>{{ child.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <article>
+          {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+          {{ content }}
+        </article>
+        <footer>Last updated: {{ page.last_modified_at | default: site.time | date: "%d %B %Y" }}</footer>
+      </main>
+    </div>
+  </body>
+</html>

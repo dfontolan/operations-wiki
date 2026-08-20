@@ -1,0 +1,21 @@
+- title: Home
+  url: /
+
+- title: Getting started
+  children:
+    - title: How to use this wiki
+      url: /getting-started/
+    - title: Document template
+      url: /templates/document-template/
+
+- title: Operations
+  children:
+    - title: Daily operations
+      url: /operations/daily-operations/
+    - title: Incident response
+      url: /operations/incident-response/
+
+- title: Reference
+  children:
+    - title: Contacts and escalation
+      url: /reference/contacts/
