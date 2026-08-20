@@ -6,7 +6,8 @@
     <meta name="description" content="{{ site.description }}">
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <script>try { document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (error) {}</script>
-    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/wiki-mark.svg' | relative_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ site.url }}{{ site.baseurl }}/assets/images/wiki-mark.svg?v=2">
+    <link rel="shortcut icon" type="image/svg+xml" href="{{ site.url }}{{ site.baseurl }}/assets/images/wiki-mark.svg?v=2">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
