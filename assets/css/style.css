@@ -1,5 +1,5 @@
 :root {
-  --sidebar-width: 20rem; --ink: #172033; --muted: #687386; --line: #dfe5ec;
+  --sidebar-width: 28rem; --ink: #172033; --muted: #687386; --line: #dfe5ec;
   --surface: #fcfdff; --sidebar: #f1f4f8; --page: #f4f6fa; --link: #2563eb;
   --link-strong: #1d4ed8; --hover: #edf3ff; --current: #e0ebff; --code: #eff2f6;
   --pre: #172033; --shadow: 0 16px 45px rgb(29 46 76 / 8%);
