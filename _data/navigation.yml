@@ -15,7 +15,7 @@
 - title: Operations
   emoji: ⚙️
   children:
-    - title: Daily operationsdsabdasbdasbdasbdasbdasdbsa
+    - title: Daily operations
       emoji: 📅
       url: /operations/daily-operations/
     - title: Incident response
